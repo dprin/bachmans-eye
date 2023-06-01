@@ -7,8 +7,9 @@ use bevy::{prelude::*, winit::WinitSettings};
 #[derive(States, PartialEq, Eq, Debug, Clone, Hash, Default)]
 enum AppState {
     #[default]
-    Menu,
+    MainMenu,
     Simulation,
+    Settings,
 }
 
 fn main() {
@@ -19,7 +20,7 @@ fn main() {
         .insert_resource(WinitSettings::desktop_app())
         .insert_resource(ClearColor(global::color::BACKGROUND))
         .add_state::<AppState>()
-        .add_plugin(menu::MenuPlugin)
+        .add_plugin(menu::MainMenuPlugin)
         .add_plugin(simulation::SimulationPlugin)
         .run();
 }

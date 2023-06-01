@@ -1,5 +1,3 @@
-// #![cfg(test)]
-
 use super::{*, CableBundle, client::{ClientBundle, Client}, cable::Cable, connection::Sender};
 
 #[test]

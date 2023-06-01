@@ -29,10 +29,6 @@ impl Default for Config {
     }
 }
 
-struct Inspector {
-    config: Box<dyn Config>
-}
-
 impl Client {
     pub fn get_payload(&mut self, time: &Res<Time>) -> Payload {
         Payload::UniformBits {

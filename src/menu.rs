@@ -2,13 +2,13 @@ use bevy::prelude::*;
 
 use crate::{global, AppState};
 
-pub struct MenuPlugin;
+pub struct MainMenuPlugin;
 
-impl Plugin for MenuPlugin {
+impl Plugin for MainMenuPlugin {
     fn build(&self, app: &mut App) {
         app.add_system(setup.on_startup())
-            .add_system(button_system.in_set(OnUpdate(AppState::Menu)))
-            .add_system(cleanup.in_schedule(OnExit(AppState::Menu)));
+            .add_system(button_system.in_set(OnUpdate(AppState::MainMenu)))
+            .add_system(cleanup.in_schedule(OnExit(AppState::MainMenu)));
     }
 }
 
