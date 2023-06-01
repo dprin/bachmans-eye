@@ -3,9 +3,7 @@ use bevy::prelude::*;
 #[derive(Component)]
 pub struct Button;
 
-pub fn button_animations() {
-    
-}
+pub fn button_animations() {}
 
 mod color {
     use bevy::prelude::*;
