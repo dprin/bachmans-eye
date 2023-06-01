@@ -1,6 +1,7 @@
 mod global;
 mod menu;
 mod simulation;
+mod ui;
 
 use bevy::{prelude::*, winit::WinitSettings};
 
@@ -22,6 +23,7 @@ fn main() {
         .add_state::<AppState>()
         .add_plugin(menu::MainMenuPlugin)
         .add_plugin(simulation::SimulationPlugin)
+        .add_plugin(ui::UIPLugin)
         .run();
 }
 
